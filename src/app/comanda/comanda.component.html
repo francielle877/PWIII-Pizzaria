@@ -6,25 +6,25 @@
     <div id="wrapper">
       <div id="comanda">
           <h1>COMANDA</h1>
-           <form>
+           <form class="mt-5" [formGroup]="formComanda" (ngSubmit)="onProcessar()" >
              <p>
                <label>Chopp</label>
-               <input type="text" name="inChopp"/>
+               <input type="text" name="inChopp" class="form-control" formControlName="inChopp"/>
              </p>
              <p>
                 <label>Pizzas</label>
-                <input type="text" name="inPizza"/>
+                <input type="text" name="inPizzas" class="form-control" formControlName="inPizzas"/>
               </p>
               <p>
                   <label>Recheios</label>
-                  <input type="text" name="inRecheio"/>
+                  <input type="text" name="inRecheios" class="form-control" formControlName="inRecheios"/>
                 </p>
                 <p>
                     <label>Pessoas</label>
-                    <input type="text" name="inPessoa"/>
+                    <input type="text" name="inPessoas" class="form-control" formControlName="inPessoas"/>
                   </p>
              <p calss="keepcomanda">
-               <input type="checkbox" name="inServico"/>
+               <input type="checkbox" name="inServico" formControlName="inServico"/>
                <label>Taxa de Serviço</label>
              </p>
              <p class="comanda button">
